@@ -91,7 +91,7 @@ Login
 
                                 <div class="mt-4 text-center">
                                     <p class="mb-0"> @lang('lang_v1.dont_have_account')  
-                                        <a href="{{url('register')}}" class="font-weight-medium text-primary"> 
+                                        <a href="{{url('business/register')}}" class="font-weight-medium text-primary"> 
                                             @lang('lang_v1.register')
                                         </a> 
                                     </p>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,7 @@
     <title>@yield('title') - {{ config('app.name', 'POS') }}</title> 
 
     @include('layouts.partials.css')
-
+    <link href="{{ URL::asset('custom.css')}}" id="custom-style" rel="stylesheet" type="text/css" />
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -27,7 +26,7 @@
     @endif
     <div class="container-fluid">
         <div class="row eq-height-row">
-            <div class="col-md-5 col-sm-5 hidden-xs left-col eq-height-col" >
+            {{-- <div class="col-md-5 col-sm-5 hidden-xs left-col eq-height-col" >
                 <div class="left-col-content login-header"> 
                     <div style="margin-top: 50%;">
                     <a href="/">
@@ -43,9 +42,9 @@
                     @endif
                     </div>
                 </div>
-            </div>
-            <div class="col-md-7 col-sm-7 col-xs-12 right-col eq-height-col">
-                <div class="row">
+            </div> --}}
+            <div class="col-md-12 col-sm-7 col-xs-12 right-col eq-height-col" style="">
+                <div class="row" style="width: 100%;">
                 <div class="col-md-3 col-xs-4" style="text-align: left;">
                     <select class="form-control input-sm" id="change_lang" style="margin: 10px;">
                     @foreach(config('constants.langs') as $key => $val)
@@ -72,7 +71,7 @@
                         @endif
                     @endif
                     @if($request->segment(1) != 'login')
-                        &nbsp; &nbsp;<span class="text-white">{{ __('business.already_registered')}} </span><a href="{{ action('Auth\LoginController@login') }}@if(!empty(request()->lang)){{'?lang=' . request()->lang}} @endif">{{ __('business.sign_in') }}</a>
+                        &nbsp; &nbsp;<span class="text-muted">{{ __('business.already_registered')}} </span><a style="color:#777 !important;" href="{{ action('Auth\LoginController@login') }}@if(!empty(request()->lang)){{'?lang=' . request()->lang}} @endif">{{ __('business.sign_in') }}</a>
                     @endif
                 </div>
                 

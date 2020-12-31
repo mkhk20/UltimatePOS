@@ -4,11 +4,27 @@
     <head>
         @include('minible.title-meta')
         @include('minible.head')
-  </head>
+  
+    </head>
 
     <body class="authentication-bg">
+
+        <style>
+            #change_lang{
+                background: none;
+                border: none;
+            }
+
+            #change_lang {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+                text-overflow: '';
+            }
+    
+        </style>  
         {{-- <div class="col-md-3 col-xs-4" style="text-align: left;"> --}}
-            <select class=" input-sm" id="change_lang" style="margin: 10px;">
+            <select class="input-sm" id="change_lang" style="margin: 10px;">
             @foreach(config('constants.langs') as $key => $val)
                 <option value="{{$key}}" 
                     @if( (empty(request()->lang) && config('app.locale') == $key) 
