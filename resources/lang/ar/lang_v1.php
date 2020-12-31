@@ -190,6 +190,7 @@ return [
 "username" => "إسم المستخدم",
 "password" => "كلمة السر",
 "remember_me" => "تذكرني",
+"dont_have_account" => " ليس لديك حساب ؟ ",
 "forgot_your_password" => "نسيت كلمة السر؟",
 "reset_password" => "إعادة تعيين كلمة السر",
 "email_address" => "البريد الإلكتروني",
@@ -1109,4 +1110,9 @@ return [
 "refund"=>"إعادة مال",
 "activate"=>"تفعيل",
 "deactivate"=>"إلغاء التنشيط",
+'welcome_back'=> ' مرحبا بك ! ', 
+'signin_to_continue'=> ' قم بتسجيل الدخول للمواصلة الى نظام نقاط البيع ', 
+'copyright_reserved'=> " صنع <i class='mdi mdi-heart text-danger'> </i> من قبل ©", 
+'copyright_by'=> 'الاسم', 
+
 ];

@@ -1,0 +1,12 @@
+
+#change_lang{
+    background: none;
+    border: none;
+}
+
+#change_lang {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
