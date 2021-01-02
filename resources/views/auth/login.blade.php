@@ -4,14 +4,14 @@ Login
 @endsection
 @section('content')
 <div class="home-btn d-none d-sm-block">
-    <a href="{{url('index')}}" class="text-dark"><i class="mdi mdi-home-variant h2"></i></a>
+    <a href="http://poscircle.com" class="text-dark"><i class="mdi mdi-home-variant h2"></i></a>
 </div>
 <div class="account-pages my-5 pt-sm-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <a href="{{url('index')}}" class="mb-5 d-block auth-logo">
+                    <a href="http://poscircle.com" class="mb-5 d-block auth-logo">
                         <img src="{{ URL::asset('assets/images/logo-dark.png')}}" alt="" height="22" class="logo logo-dark">
                         <img src="{{ URL::asset('assets/images/logo-light.png')}}" alt="" height="22" class="logo logo-light">
                     </a>
