@@ -19,7 +19,7 @@
     @component('components.widget', ['class' => 'box-primary', 'title' => __( 'user.all_users' )])
         @can('user.create')
             @slot('tool')
-                <div class="box-tools">
+                <div class="box-tools" style="margin-left:5px;margin-right:5px;">
                     <a class="btn btn-block btn-primary" 
                     href="{{action('ManageUserController@create')}}" >
                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</a>

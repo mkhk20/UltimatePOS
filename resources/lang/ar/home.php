@@ -1,7 +1,7 @@
 <?php 
  return [ 
 "home" => "الرئيسية",
-"welcome_message" => ",:name مرحبا",
+"welcome_message" => ":name مرحبا ,",
 "total_sell" => "اجمالي المبيعات",
 "total_purchase" => "إجمالي المشتريات",
 "invoice_due" => "الفواتير الغير مدفوعة",
