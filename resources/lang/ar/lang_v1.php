@@ -1112,7 +1112,9 @@ return [
 "deactivate"=>"إلغاء التنشيط",
 'welcome_back'=> ' مرحبا بك ! ', 
 'signin_to_continue'=> ' قم بتسجيل الدخول للمواصلة الى نظام نقاط البيع ', 
+//
 'copyright_reserved'=> " صنع <i class='mdi mdi-heart text-danger'> </i> من قبل ©", 
 'copyright_by'=> 'الاسم', 
+"social_media_accounts"=>"حسابات التواصل الاجتماعية",
 
 ];

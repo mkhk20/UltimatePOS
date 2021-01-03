@@ -1183,7 +1183,9 @@ return [
     'no_stock_history_found' => 'No stock history found',
     'welcome_back'=> 'Welcome Back !',
     'signin_to_continue'=> ' Sign in to continue to Minible pos system ', 
+    //
     'copyright_reserved'=> " Made with love  by ©", 
     'copyright_by'=> 'minible', 
+    "social_media_accounts"=>"social media accounts",
 
 ];
