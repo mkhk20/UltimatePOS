@@ -938,7 +938,16 @@ table.table-text-center td, table.table-text-center th{
 .info-box-new-style {
   padding: 12px !important;
 }
-
+.skin-blue .main-header .logo, .skin-blue-light .main-header .logo {
+	background: #485c75;
+}
+.skin-blue .main-header .logo:hover, 
+.skin-blue-light .main-header .logo:hover {
+	background: #485c75;
+}
+.skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+	background-color: white;
+}
 /* start card */
 .card {
 	position: relative;
@@ -949,9 +958,9 @@ table.table-text-center td, table.table-text-center th{
 	background-color: #fff;
 	background-clip: border-box;
 	border: 0 solid #f6f6f6;
-	border-radius: 0.25rem;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+	border-radius: 0.50rem;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
 }
 
 .card > hr {
@@ -984,7 +993,7 @@ table.table-text-center td, table.table-text-center th{
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 3rem;
 }
 
 .card-title {
@@ -1161,3 +1170,49 @@ table.table-text-center td, table.table-text-center th{
   }
 }
 /* end card */
+
+.chart{
+  background-color: #fff;
+	background-clip: border-box;
+	border: 0 solid #f6f6f6;
+	border-radius: 0.50rem;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+  margin-bottom: 10px;
+}
+
+/* dashboard */
+
+.skin-blue .content-wrapper .content-header-custom, .skin-blue-light .content-wrapper .content-header-custom{
+  background: #f5f6f8;
+}
+.content-wrapper{
+  background: #f5f6f8;
+}
+
+.skin-blue .content-wrapper .content-header-custom a, 
+.skin-blue .content-wrapper .content-header-custom h1, 
+.skin-blue .content-wrapper .content-header-custom small, 
+.skin-blue-light .content-wrapper .content-header-custom a, 
+.skin-blue-light .content-wrapper .content-header-custom h1, 
+.skin-blue-light .content-wrapper .content-header-custom small {
+	color: #495057 !important;
+}
+
+.sidebar-mini.sidebar-collapse .main-header .navbar {
+	margin-left: 50px;
+  background-color: #ffffff;
+}
+.main-header .navbar{
+  box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+}
+
+.skin-blue-light .main-header .navbar .nav > li > a,
+.navbar-text-color,
+.skin-blue-light .main-header .navbar .sidebar-toggle{
+  color:#555b6d;
+}
+
+.skin-blue .main-header .navbar, .skin-blue-light .main-header .navbar{
+  background:#ffffff;
+}

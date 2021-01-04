@@ -16,3 +16,5 @@ npm-debug.log
 /public/uploads/temp
 /public/modules/
 /public/mix-manifest.json
+*.log
+storage/logs/laravel-2021-01-04.log

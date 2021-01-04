@@ -19,7 +19,7 @@
                 {!! Form::select('dashboard_location', $all_locations, null, ['class' => 'form-control select2', 'placeholder' => __('lang_v1.select_location'), 'id' => 'dashboard_location']); !!}
               @endif
             </div>
-    		<div class="col-md-8 col-xs-12">
+    		{{-- <div class="col-md-8 col-xs-12">
     			<div class="btn-group pull-right" data-toggle="buttons">
     				<label class="btn btn-info active">
         				<input type="radio" name="date-filter"
@@ -46,7 +46,7 @@
         				> {{ __('home.this_fy') }}
       				</label>
                 </div>
-    		</div>
+    		</div> --}}
     	</div>
     	<br>
       <div class="row">
@@ -57,11 +57,13 @@
                         <div id="total-revenue-chart"></div>
                     </div>
                     <div>
-                        <h4 class="mb-1 mt-1">$<span data-plugin="counterup">34,152</span></h4>
-                        <p class="text-muted mb-0">Total Revenue</p>
+                        {{-- <h4 class="mb-1 mt-1">$<span data-plugin="counterup">34,152</span></h4> --}}
+                        <span class="info-box-number total_purchase"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                        <p class="text-muted mb-0"> {{ __('home.total_purchase') }} </p>
                     </div>
-                    <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i class="mdi mdi-arrow-up-bold ml-1"></i>2.65%</span> since last week
-                    </p>
+                    {{-- //TODO calc this and uncomment it  --}}
+                    {{-- <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i class="mdi mdi-arrow-up-bold ml-1"></i>2.65%</span> since last week
+                    </p> --}}
                 </div>
             </div>
         </div> <!-- end col-->
@@ -73,11 +75,11 @@
                         <div id="orders-chart"> </div>
                     </div>
                     <div>
-                        <h4 class="mb-1 mt-1"><span data-plugin="counterup">5,643</span></h4>
-                        <p class="text-muted mb-0">Orders</p>
+                        <span class="info-box-number total_sell"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                        <p class="text-muted mb-0">{{ __('home.total_sell') }}</p>
                     </div>
-                    <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i class="mdi mdi-arrow-down-bold ml-1"></i>0.82%</span> since last week
-                    </p>
+                    {{-- <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i class="mdi mdi-arrow-down-bold ml-1"></i>0.82%</span> since last week
+                    </p> --}}
                 </div>
             </div>
         </div> <!-- end col-->
@@ -89,11 +91,11 @@
                         <div id="customers-chart"> </div>
                     </div>
                     <div>
-                        <h4 class="mb-1 mt-1"><span data-plugin="counterup">45,254</span></h4>
-                        <p class="text-muted mb-0">Customers</p>
+                      <span class="info-box-number purchase_due"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                      <span class="info-box-text">{{ __('home.purchase_due') }}</span>
                     </div>
-                    <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i class="mdi mdi-arrow-down-bold ml-1"></i>6.24%</span> since last week
-                    </p>
+                    {{-- <p class="text-muted mt-3 mb-0"><span class="text-danger mr-1"><i class="mdi mdi-arrow-down-bold ml-1"></i>6.24%</span> since last week
+                    </p> --}}
                 </div>
             </div>
         </div> <!-- end col-->
@@ -106,11 +108,11 @@
                         <div id="growth-chart"></div>
                     </div>
                     <div>
-                        <h4 class="mb-1 mt-1">+ <span data-plugin="counterup">12.58</span>%</h4>
-                        <p class="text-muted mb-0">Growth</p>
+                      <span class="info-box-number invoice_due"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                      <span class="info-box-text">{{ __('home.invoice_due') }}</span>
                     </div>
-                    <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i class="mdi mdi-arrow-up-bold ml-1"></i>10.51%</span> since last week
-                    </p>
+                    {{-- <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i class="mdi mdi-arrow-up-bold ml-1"></i>10.51%</span> since last week
+                    </p> --}}
                 </div>
             </div>
         </div> <!-- end col-->
@@ -119,7 +121,23 @@
 
       	<div class="row row-custom">
             <!-- expense -->
-            <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
+            <div class="col-md-3">
+    
+              <div class="card">
+                  <div class="card-body">
+                      <div class="float-right mt-2">
+                          <div id="expense-chart"></div>
+                      </div>
+                      <div>
+                        <span class="info-box-number total_expense"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
+                        <span class="info-box-text">{{ __('lang_v1.expense') }}</span>
+                      </div>
+                      {{-- <p class="text-muted mt-3 mb-0"><span class="text-success mr-1"><i class="mdi mdi-arrow-up-bold ml-1"></i>10.51%</span> since last week
+                      </p> --}}
+                  </div>
+              </div>
+          </div> <!-- end col-->
+            {{-- <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
               <div class="info-box info-box-new-style">
                 <span class="info-box-icon bg-red">
                   <i class="fas fa-minus-circle"></i>
@@ -134,7 +152,7 @@
                 <!-- /.info-box-content -->
               </div>
               <!-- /.info-box -->
-            </div>
+            </div> --}}
         </div>
         @if(!empty($widgets['after_sale_purchase_totals']))
             @foreach($widgets['after_sale_purchase_totals'] as $widget)
@@ -144,13 +162,14 @@
         @if(!empty($all_locations))
           	<!-- sales chart start -->
           	<div class="row">
-          		<div class="col-sm-12">
-                {{-- //TODO change the chart  --}}
+          		<div class="col-sm-12 m-auto" style="float: unset;">
                     {{-- @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_last_30_days')])
                       {!! $sells_chart_1->container() !!}
                     @endcomponent --}}
-
-                    <div id="apexcharts" style="max-width: 100%;margin: 35px auto;"></div>
+                  <div class="chart">
+                    <h4> {{ __('home.sells_last_30_days') }} </h4>
+                    <div id="sells_last_30_days" class="apexcharts" style="max-width: 100%;"></div>
+                  </div>
           		</div>
           	</div>
         @endif
@@ -162,9 +181,13 @@
         @if(!empty($all_locations))
           	<div class="row">
           		<div class="col-sm-12">
-                    @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_current_fy')])
+                    {{-- @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_current_fy')])
                       {!! $sells_chart_2->container() !!}
-                    @endcomponent
+                    @endcomponent --}}
+                    <div class="chart">
+                      <h4> {{ __('home.sells_current_fy') }} </h4>
+                      <div id="sells_current_fy" class="apexcharts" style="max-width: 100%;"></div>
+                    </div>
           		</div>
           	</div>
         @endif
@@ -280,6 +303,7 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <script>
+      var sell_values = {{ $all_sell_values }} ;
       var options = {
         chart: {
           type: 'area',
@@ -287,7 +311,7 @@
         },
         series: [{
           name: 'sales',
-          data: {{ $all_sell_values }}
+          data: sell_values
         }],
         xaxis: {
           categories: {!! $sell_values_months !!}
@@ -301,149 +325,46 @@
         colors:['#2bd982']
       }
 
-      var chart = new ApexCharts(document.querySelector("#apexcharts"), options);
-
+      var chart = new ApexCharts(document.querySelector("#sells_last_30_days"), options);
       chart.render();
+
+
+
+      var options1 = {
+        chart: {
+          type: 'area',
+          height:' 500px '
+        },
+        series: [{
+          name: 'sales',
+          data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54, 100]
+        }],
+        xaxis: {
+          categories: {!! $fy_labels !!}
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke:{
+          curve:'smooth'
+        },
+        colors:['#8E24AA']
+      }
+      var chart1 = new ApexCharts(document.querySelector("#sells_current_fy"), options1);
+
+      
+      chart1.render();
     </script>
 
     {{-- charts --}}
     <script>
-      //
-      // Total Revenue Chart
-      //
-      var options1 = {
-          series: [{
-              data: [25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54]
-          }],
-          fill: {
-              colors: ['#5b73e8']
-          },
-          chart: {
-              type: 'bar',
-              width: 70,
-              height: 40,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          plotOptions: {
-              bar: {
-                  columnWidth: '50%'
-              }
-          },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: {
-              crosshairs: {
-                  width: 1
-              },
-          },
-          tooltip: {
-              fixed: {
-                  enabled: false
-              },
-              x: {
-                  show: false
-              },
-              y: {
-                  title: {
-                      formatter: function (seriesName) {
-                          return ''
-                      }
-                  }
-              },
-              marker: {
-                  show: false
-              }
-          }
-      };
 
-      var chart1 = new ApexCharts(document.querySelector("#total-revenue-chart"), options1);
-      chart1.render();
 
       //
       // Orders Chart
       //
       var options = {
-          fill: {
-              colors: ['#34c38f']
-          },
-          series: [70],
-          chart: {
-              type: 'radialBar',
-              width: 45,
-              height: 45,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          dataLabels: {
-              enabled: false
-          },
-          plotOptions: {
-              radialBar: {
-                  hollow: {
-                      margin: 0,
-                      size: '60%'
-                  },
-                  track: {
-                      margin: 0
-                  },
-                  dataLabels: {
-                      show: false
-                  }
-              }
-          }
-      };
-
-      var chart = new ApexCharts(document.querySelector("#orders-chart"), options);
-      chart.render();
-
-
-      //
-      // Customers Chart
-      //
-
-      var options = {
-          fill: {
-              colors: ['#5b73e8']
-          },
-          series: [55],
-          chart: {
-              type: 'radialBar',
-              width: 45,
-              height: 45,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          dataLabels: {
-              enabled: false
-          },
-          plotOptions: {
-              radialBar: {
-                  hollow: {
-                      margin: 0,
-                      size: '60%'
-                  },
-                  track: {
-                      margin: 0
-                  },
-                  dataLabels: {
-                      show: false
-                  }
-              }
-          }
-      };
-
-      var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
-      chart.render();
-
-
-      //
-      // Growth Chart
-      //
-      var options2 = {
-          series: [{
+        series: [{
               data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
           }],
           fill: {
@@ -488,93 +409,220 @@
           }
       };
 
-      var chart2 = new ApexCharts(document.querySelector("#growth-chart"), options2);
-      chart2.render();
-
-
+      var chart = new ApexCharts(document.querySelector("#total-revenue-chart"), options);
+      chart.render();
       //
-      // Sales Analytics Chart
-
-      var options = {
+      // Total Revenue Chart
+      //
+      var options1 = {
+          series: [{
+              data: sell_values.slice(Math.max(sell_values.length - 7  , 0 ))
+          }],
+          fill: {
+              colors: ['#5b73e8']
+          },
           chart: {
-              height: 339,
-              type: 'line',
-              stacked: false,
-              toolbar: {
-                  show: false
+              type: 'bar',
+              width: 70,
+              height: 40,
+              sparkline: {
+                  enabled: true
               }
           },
-          stroke: {
-              width: [0, 2, 4],
-              curve: 'smooth'
+          dataLabels: {
+            position: 'bottom'
           },
           plotOptions: {
               bar: {
-                  columnWidth: '30%'
+                  columnWidth: '50%'
               }
           },
-          colors: ['#5b73e8', '#dfe2e6', '#f1b44c'],
-          series: [{
-              name: 'Desktops',
-              type: 'column',
-              data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
-          }, {
-              name: 'Laptops',
-              type: 'area',
-              data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
-          }, {
-              name: 'Tablets',
-              type: 'line',
-              data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
-          }],
-          fill: {
-              opacity: [0.85, 0.25, 1],
-              gradient: {
-                  inverseColors: false,
-                  shade: 'light',
-                  type: "vertical",
-                  opacityFrom: 0.85,
-                  opacityTo: 0.55,
-                  stops: [0, 100, 100, 100]
-              }
-          },
-          labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003', '08/01/2003', '09/01/2003', '10/01/2003', '11/01/2003'],
-          markers: {
-              size: 0
-          },
-
+          labels: [1, 2, 3, 4, 5, 6, 7],
           xaxis: {
-              type: 'datetime'
-          },
-          yaxis: {
-              title: {
-                  text: 'Points',
+              crosshairs: {
+                  width: 1
               },
           },
           tooltip: {
-              shared: true,
-              intersect: false,
+              fixed: {
+                  enabled: false
+              },
+              x: {
+                  show: false
+              },
               y: {
-                  formatter: function (y) {
-                      if (typeof y !== "undefined") {
-                          return y.toFixed(0) + " points";
+                  title: {
+                      formatter: function (seriesName) {
+                          return ''
                       }
-                      return y;
-
                   }
+              },
+              marker: {
+                  show: true
+              }
+          }
+      };
+      
+      var chart1 = new ApexCharts(document.querySelector("#orders-chart"), options1);
+      chart1.render();
+
+      //
+      // Customers Chart
+      //
+
+      var options = {
+        series: [{
+              data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
+          }],
+          fill: {
+              colors: ['#34c38f']
+          },
+          chart: {
+              type: 'bar',
+              width: 70,
+              height: 40,
+              sparkline: {
+                  enabled: true
               }
           },
-          grid: {
-              borderColor: '#f1f1f1'
+          plotOptions: {
+              bar: {
+                  columnWidth: '50%'
+              }
+          },
+          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+          xaxis: {
+              crosshairs: {
+                  width: 1
+              },
+          },
+          tooltip: {
+              fixed: {
+                  enabled: false
+              },
+              x: {
+                  show: false
+              },
+              y: {
+                  title: {
+                      formatter: function (seriesName) {
+                          return ''
+                      }
+                  }
+              },
+              marker: {
+                  show: false
+              }
           }
-        }
+      };
 
-        var chart = new ApexCharts(
-          document.querySelector("#sales-analytics-chart"),
-          options
-        );
+      var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
+      chart.render();
 
-        chart.render();
+
+      //
+      // Growth Chart
+      //
+      var options2 = {
+          series: [{
+              data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
+          }],
+          fill: {
+              colors: ['#f46a6a']
+          },
+          chart: {
+              type: 'bar',
+              width: 70,
+              height: 40,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          plotOptions: {
+              bar: {
+                  columnWidth: '50%'
+              }
+          },
+          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+          xaxis: {
+              crosshairs: {
+                  width: 1
+              },
+          },
+          tooltip: {
+              fixed: {
+                  enabled: false
+              },
+              x: {
+                  show: false
+              },
+              y: {
+                  title: {
+                      formatter: function (seriesName) {
+                          return ''
+                      }
+                  }
+              },
+              marker: {
+                  show: false
+              }
+          }
+      };
+
+      var chart2 = new ApexCharts(document.querySelector("#growth-chart"), options2);
+      chart2.render();
+
+            //
+      // Growth Chart
+      //
+      var options3 = {
+          series: [{
+              data: [25, 66, 41, 89, 63, 25, 44]
+          }],
+          fill: {
+              colors: ['#9C27B0']
+          },
+          chart: {
+              type: 'bar',
+              width: 70,
+              height: 40,
+              sparkline: {
+                  enabled: true
+              }
+          },
+          plotOptions: {
+              bar: {
+                  columnWidth: '50%'
+              }
+          },
+          labels: [1, 2, 3, 4, 5, 6, 7],
+          xaxis: {
+              crosshairs: {
+                  width: 1
+              },
+          },
+          tooltip: {
+              fixed: {
+                  enabled: false
+              },
+              x: {
+                  show: false
+              },
+              y: {
+                  title: {
+                      formatter: function (seriesName) {
+                          return ''
+                      }
+                  }
+              },
+              marker: {
+                  show: false
+              }
+          }
+      };
+
+      var chart2 = new ApexCharts(document.querySelector("#expense-chart"), options3);
+      chart2.render();
 
     </script>
 @endsection

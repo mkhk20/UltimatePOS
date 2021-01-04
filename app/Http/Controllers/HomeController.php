@@ -209,10 +209,10 @@ class HomeController extends Controller
                 $widgets[$widget_array['position']][] = $widget_array['widget'];
             }
         }
-
         return view('home.index', compact('date_filters', 'sells_chart_1', 'sells_chart_2', 'widgets', 'all_locations'))->with([
             'all_sell_values'       => json_encode($all_sell_values) ,
-            'sell_values_months'    => json_encode($sells_chart_1->labels)
+            'sell_values_months'    => json_encode($sells_chart_1->labels),
+            'fy_labels'             => json_encode($labels) ,
         ]);
     }
 
