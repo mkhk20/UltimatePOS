@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('title', __('home.home'))
-
+@if( in_array(session()->get('user.language', config('app.locale')), config('constants.langs_rtl')) )
+	@php
+		$rtl = true ;
+	@endphp
+@endif
 @section('content')
 
 <!-- Content Header (Page header) -->
@@ -53,7 +57,7 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <div class="float-right mt-2">
+                    <div class=" @if($rtl) float-left  @else float-right @endif  mt-2">
                         <div id="total-revenue-chart"></div>
                     </div>
                     <div>
@@ -71,7 +75,7 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <div class="float-right mt-2">
+                    <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
                         <div id="orders-chart"> </div>
                     </div>
                     <div>
@@ -87,7 +91,7 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <div class="float-right mt-2">
+                    <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
                         <div id="customers-chart"> </div>
                     </div>
                     <div>
@@ -104,7 +108,7 @@
     
             <div class="card">
                 <div class="card-body">
-                    <div class="float-right mt-2">
+                    <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
                         <div id="growth-chart"></div>
                     </div>
                     <div>
@@ -125,7 +129,7 @@
     
               <div class="card">
                   <div class="card-body">
-                      <div class="float-right mt-2">
+                      <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
                           <div id="expense-chart"></div>
                       </div>
                       <div>
