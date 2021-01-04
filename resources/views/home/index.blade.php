@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title', __('home.home'))
+@php
+$rtl = false ;
+@endphp
 @if( in_array(session()->get('user.language', config('app.locale')), config('constants.langs_rtl')) )
 	@php
 		$rtl = true ;
