@@ -8,6 +8,7 @@
 
 <!-- app css -->
 <link rel="stylesheet" href="{{ asset('css/app.css?v='.$asset_v) }}">
+<link rel="stylesheet" href="{{ asset('css/addons.css') }}">
 
 @if(isset($pos_layout) && $pos_layout)
 	<style type="text/css">
