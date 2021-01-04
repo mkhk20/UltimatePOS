@@ -122,6 +122,7 @@ class HomeController extends Controller
                             )));
 
         if (!empty($location_sells)) {
+            // TODO handle multiable location
             foreach ($location_sells as $location_sell) {
                 $sells_chart_1->dataset($location_sell['loc_label'], 'line', $location_sell['values']);
             }
@@ -130,6 +131,9 @@ class HomeController extends Controller
         if (count($all_locations) > 1) {
             $sells_chart_1->dataset(__('report.all_locations'), 'line', $all_sell_values);
         }
+        
+        // echo "<pre>";
+        // return var_dump( str_replace( '"' , "'" , json_encode($sells_chart_1->labels) ) ) ;
 
         //Chart for sells this financial year
         $sells_this_fy = $this->transactionUtil->getSellsCurrentFy($business_id, $fy['start'], $fy['end']);
@@ -206,7 +210,10 @@ class HomeController extends Controller
             }
         }
 
-        return view('home.index', compact('date_filters', 'sells_chart_1', 'sells_chart_2', 'widgets', 'all_locations'));
+        return view('home.index', compact('date_filters', 'sells_chart_1', 'sells_chart_2', 'widgets', 'all_locations'))->with([
+            'all_sell_values'       => json_encode($all_sell_values) ,
+            'sell_values_months'    => json_encode($sells_chart_1->labels)
+        ]);
     }
 
     /**

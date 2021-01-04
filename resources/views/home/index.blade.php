@@ -140,9 +140,12 @@
           	<!-- sales chart start -->
           	<div class="row">
           		<div class="col-sm-12">
-                    @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_last_30_days')])
+                {{-- //TODO change the chart  --}}
+                    {{-- @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_last_30_days')])
                       {!! $sells_chart_1->container() !!}
-                    @endcomponent
+                    @endcomponent --}}
+
+                    <div id="apexcharts" style="max-width: 100%;margin: 35px auto;"></div>
           		</div>
           	</div>
         @endif
@@ -268,5 +271,34 @@
         {!! $sells_chart_1->script() !!}
         {!! $sells_chart_2->script() !!}
     @endif
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+      var options = {
+        chart: {
+          type: 'area',
+          height:' 500px '
+        },
+        series: [{
+          name: 'sales',
+          data: {{ $all_sell_values }}
+        }],
+        xaxis: {
+          categories: {!! $sell_values_months !!}
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke:{
+          curve:'smooth'
+        },
+        colors:['#2bd982']
+      }
+
+      var chart = new ApexCharts(document.querySelector("#apexcharts"), options);
+
+      chart.render();
+    </script>
 @endsection
 
