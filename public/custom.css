@@ -218,18 +218,3 @@
       width: 100%;
     }
   }
-
-
-  /* user profile */
-
-  .box,
-  .nav-tabs-custom > .nav-tabs > li{
-    border:none;
-  }
-  .box, .nav-tabs-custom > .nav-tabs > li{
-    position: relative;
-  }
-  .nav-tabs-custom > .nav-tabs > li.active{
-    border-bottom: 3px solid #5b73e8;
-    color: #5b73e8;
-  }
