@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('title', __( 'lang_v1.view_user' ))
+@section('css')
+<!-- Icons Css -->
+{{-- <link href="{{ URL::asset('assets/css/icons.min.css')}}" id="icons-style" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="@if ( app()->getLocale() == 'ar' ) {{ URL::asset('assets/css/app-rtl.min.css')}} @else {{ URL::asset('assets/css/app.min.css') }} @endif " id="app-style" rel="stylesheet" type="text/css" /> --}}
 
+<link href="{{ URL::asset('custom.css')}}" id="custom-style" rel="stylesheet" type="text/css" />
+
+@endsection
 @section('content')
     <!-- Main content -->
     <section class="content">
