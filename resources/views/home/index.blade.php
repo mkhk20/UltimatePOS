@@ -61,7 +61,7 @@ $rtl = false ;
             <div class="card">
                 <div class="card-body">
                     <div class=" @if($rtl) float-left  @else float-right @endif  mt-2">
-                        <div id="total-revenue-chart"></div>
+                        {{-- <div id="total-revenue-chart"></div> --}}
                     </div>
                     <div>
                         {{-- <h4 class="mb-1 mt-1">$<span data-plugin="counterup">34,152</span></h4> --}}
@@ -95,7 +95,7 @@ $rtl = false ;
             <div class="card">
                 <div class="card-body">
                     <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
-                        <div id="customers-chart"> </div>
+                        {{-- <div id="customers-chart"> </div> --}}
                     </div>
                     <div>
                       <span class="info-box-number purchase_due"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
@@ -112,7 +112,7 @@ $rtl = false ;
             <div class="card">
                 <div class="card-body">
                     <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
-                        <div id="growth-chart"></div>
+                        {{-- <div id="growth-chart"></div> --}}
                     </div>
                     <div>
                       <span class="info-box-number invoice_due"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
@@ -133,7 +133,7 @@ $rtl = false ;
               <div class="card">
                   <div class="card-body">
                       <div class="@if($rtl) float-left  @else float-right @endif  mt-2">
-                          <div id="expense-chart"></div>
+                          {{-- <div id="expense-chart"></div> --}}
                       </div>
                       <div>
                         <span class="info-box-number total_expense"><i class="fas fa-sync fa-spin fa-fw margin-bottom"></i></span>
@@ -370,54 +370,54 @@ $rtl = false ;
       //
       // Orders Chart
       //
-      var options = {
-        series: [{
-              data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
-          }],
-          fill: {
-              colors: ['#f1b44c']
-          },
-          chart: {
-              type: 'bar',
-              width: 70,
-              height: 40,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          plotOptions: {
-              bar: {
-                  columnWidth: '50%'
-              }
-          },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: {
-              crosshairs: {
-                  width: 1
-              },
-          },
-          tooltip: {
-              fixed: {
-                  enabled: false
-              },
-              x: {
-                  show: false
-              },
-              y: {
-                  title: {
-                      formatter: function (seriesName) {
-                          return ''
-                      }
-                  }
-              },
-              marker: {
-                  show: false
-              }
-          }
-      };
+    //   var options = {
+    //     series: [{
+    //           data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
+    //       }],
+    //       fill: {
+    //           colors: ['#f1b44c']
+    //       },
+    //       chart: {
+    //           type: 'bar',
+    //           width: 70,
+    //           height: 40,
+    //           sparkline: {
+    //               enabled: true
+    //           }
+    //       },
+    //       plotOptions: {
+    //           bar: {
+    //               columnWidth: '50%'
+    //           }
+    //       },
+    //       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    //       xaxis: {
+    //           crosshairs: {
+    //               width: 1
+    //           },
+    //       },
+    //       tooltip: {
+    //           fixed: {
+    //               enabled: false
+    //           },
+    //           x: {
+    //               show: false
+    //           },
+    //           y: {
+    //               title: {
+    //                   formatter: function (seriesName) {
+    //                       return ''
+    //                   }
+    //               }
+    //           },
+    //           marker: {
+    //               show: false
+    //           }
+    //       }
+    //   };
 
-      var chart = new ApexCharts(document.querySelector("#total-revenue-chart"), options);
-      chart.render();
+    //   var chart = new ApexCharts(document.querySelector("#total-revenue-chart"), options);
+    //   chart.render();
       //
       // Total Revenue Chart
       //
@@ -477,159 +477,159 @@ $rtl = false ;
       // Customers Chart
       //
 
-      var options = {
-        series: [{
-              data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
-          }],
-          fill: {
-              colors: ['#34c38f']
-          },
-          chart: {
-              type: 'bar',
-              width: 70,
-              height: 40,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          plotOptions: {
-              bar: {
-                  columnWidth: '50%'
-              }
-          },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: {
-              crosshairs: {
-                  width: 1
-              },
-          },
-          tooltip: {
-              fixed: {
-                  enabled: false
-              },
-              x: {
-                  show: false
-              },
-              y: {
-                  title: {
-                      formatter: function (seriesName) {
-                          return ''
-                      }
-                  }
-              },
-              marker: {
-                  show: false
-              }
-          }
-      };
+    //   var options = {
+    //     series: [{
+    //           data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
+    //       }],
+    //       fill: {
+    //           colors: ['#34c38f']
+    //       },
+    //       chart: {
+    //           type: 'bar',
+    //           width: 70,
+    //           height: 40,
+    //           sparkline: {
+    //               enabled: true
+    //           }
+    //       },
+    //       plotOptions: {
+    //           bar: {
+    //               columnWidth: '50%'
+    //           }
+    //       },
+    //       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    //       xaxis: {
+    //           crosshairs: {
+    //               width: 1
+    //           },
+    //       },
+    //       tooltip: {
+    //           fixed: {
+    //               enabled: false
+    //           },
+    //           x: {
+    //               show: false
+    //           },
+    //           y: {
+    //               title: {
+    //                   formatter: function (seriesName) {
+    //                       return ''
+    //                   }
+    //               }
+    //           },
+    //           marker: {
+    //               show: false
+    //           }
+    //       }
+    //   };
 
-      var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
-      chart.render();
+    //   var chart = new ApexCharts(document.querySelector("#customers-chart"), options);
+    //   chart.render();
 
 
       //
       // Growth Chart
       //
-      var options2 = {
-          series: [{
-              data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
-          }],
-          fill: {
-              colors: ['#f46a6a']
-          },
-          chart: {
-              type: 'bar',
-              width: 70,
-              height: 40,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          plotOptions: {
-              bar: {
-                  columnWidth: '50%'
-              }
-          },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: {
-              crosshairs: {
-                  width: 1
-              },
-          },
-          tooltip: {
-              fixed: {
-                  enabled: false
-              },
-              x: {
-                  show: false
-              },
-              y: {
-                  title: {
-                      formatter: function (seriesName) {
-                          return ''
-                      }
-                  }
-              },
-              marker: {
-                  show: false
-              }
-          }
-      };
+    //   var options2 = {
+    //       series: [{
+    //           data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
+    //       }],
+    //       fill: {
+    //           colors: ['#f46a6a']
+    //       },
+    //       chart: {
+    //           type: 'bar',
+    //           width: 70,
+    //           height: 40,
+    //           sparkline: {
+    //               enabled: true
+    //           }
+    //       },
+    //       plotOptions: {
+    //           bar: {
+    //               columnWidth: '50%'
+    //           }
+    //       },
+    //       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    //       xaxis: {
+    //           crosshairs: {
+    //               width: 1
+    //           },
+    //       },
+    //       tooltip: {
+    //           fixed: {
+    //               enabled: false
+    //           },
+    //           x: {
+    //               show: false
+    //           },
+    //           y: {
+    //               title: {
+    //                   formatter: function (seriesName) {
+    //                       return ''
+    //                   }
+    //               }
+    //           },
+    //           marker: {
+    //               show: false
+    //           }
+    //       }
+    //   };
 
-      var chart2 = new ApexCharts(document.querySelector("#growth-chart"), options2);
-      chart2.render();
+    //   var chart2 = new ApexCharts(document.querySelector("#growth-chart"), options2);
+    //   chart2.render();
 
             //
       // Growth Chart
       //
-      var options3 = {
-          series: [{
-              data: [25, 66, 41, 89, 63, 25, 44]
-          }],
-          fill: {
-              colors: ['#9C27B0']
-          },
-          chart: {
-              type: 'bar',
-              width: 70,
-              height: 40,
-              sparkline: {
-                  enabled: true
-              }
-          },
-          plotOptions: {
-              bar: {
-                  columnWidth: '50%'
-              }
-          },
-          labels: [1, 2, 3, 4, 5, 6, 7],
-          xaxis: {
-              crosshairs: {
-                  width: 1
-              },
-          },
-          tooltip: {
-              fixed: {
-                  enabled: false
-              },
-              x: {
-                  show: false
-              },
-              y: {
-                  title: {
-                      formatter: function (seriesName) {
-                          return ''
-                      }
-                  }
-              },
-              marker: {
-                  show: false
-              }
-          }
-      };
+    //   var options3 = {
+    //       series: [{
+    //           data: [25, 66, 41, 89, 63, 25, 44]
+    //       }],
+    //       fill: {
+    //           colors: ['#9C27B0']
+    //       },
+    //       chart: {
+    //           type: 'bar',
+    //           width: 70,
+    //           height: 40,
+    //           sparkline: {
+    //               enabled: true
+    //           }
+    //       },
+    //       plotOptions: {
+    //           bar: {
+    //               columnWidth: '50%'
+    //           }
+    //       },
+    //       labels: [1, 2, 3, 4, 5, 6, 7],
+    //       xaxis: {
+    //           crosshairs: {
+    //               width: 1
+    //           },
+    //       },
+    //       tooltip: {
+    //           fixed: {
+    //               enabled: false
+    //           },
+    //           x: {
+    //               show: false
+    //           },
+    //           y: {
+    //               title: {
+    //                   formatter: function (seriesName) {
+    //                       return ''
+    //                   }
+    //               }
+    //           },
+    //           marker: {
+    //               show: false
+    //           }
+    //       }
+    //   };
 
-      var chart2 = new ApexCharts(document.querySelector("#expense-chart"), options3);
-      chart2.render();
+    //   var chart2 = new ApexCharts(document.querySelector("#expense-chart"), options3);
+    //   chart2.render();
 
     </script>
 @endsection
